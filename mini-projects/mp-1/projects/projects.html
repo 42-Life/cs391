@@ -9,9 +9,27 @@
     <header>
         <h1>Projects</h1>
         <p>Projects and a functional calculator can be found on this page.</p>
+        <script src="projects.js"></script>
     </header>
     <nav></nav>
-    <main></main>
+    <main>
+        <!-- PROMPT -->
+        <h4>Please enter two numbers, and select an operation</h4>
+
+        <!-- INPUTS -->
+        <input id="num1" class="inputNumber">
+        <input id="num2" class="inputNumber">
+
+        <!-- BUTTONS -->
+        <button onclick="addition()">+</button>
+        <button onclick="subtract()">-</button>
+        <button onclick="divide()">/</button>
+        <button onclick="power()">**</button>
+        <button onclick="clearInputs()">Clear</button>
+
+        <!-- OUTPUT -->
+        <h4 id="output"></h4>
+    </main>
     <footer>
         <p>All Rights Reserved by Ajani Hickling <a href="../index/index.html">Credits</a> &#169</p>
     </footer>
