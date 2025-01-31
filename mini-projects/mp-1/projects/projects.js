@@ -1,32 +1,29 @@
 function addition() {
     let num1 = Number(document.getElementById("num1").value);
     let num2 = Number(document.getElementById("num2").value);
-    if (isNaN(num1+num2)) {
-        document.getElementById("output").innerHTML = "Please enter two numbers.";
-    } else {
-        document.getElementById("output").innerHTML = String(num1+num2);
-    }
+    let numOut = num1 + num2;
+    outputProcessing(numOut);
 }
 
 function subtract() {
     let num1 = Number(document.getElementById("num1").value);
     let num2 = Number(document.getElementById("num2").value);
-    if (isNaN(num1-num2)) {
-        document.getElementById("output").innerHTML = "Please enter two numbers.";
-    } else {
-        document.getElementById("output").innerHTML = String(num1-num2);
-    }
+    let numOut = num1 - num2;
+    outputProcessing(numOut);
 }
 
 function divide() {
     let num1 = Number(document.getElementById("num1").value);
     let num2 = Number(document.getElementById("num2").value);
-    if (isNaN(num1/num2)) {
+    let numOut = num1 / num2;
+    ifNegative(numOut);
+
+    if (isNaN(numOut)) {
         document.getElementById("output").innerHTML = "Please enter two numbers.";
     } else if (num2 === 0) {
         document.getElementById("output").innerHTML = "Cannot divide by zero";
     } else {
-        document.getElementById("output").innerHTML = String(num1/num2);
+        document.getElementById("output").innerHTML = String(numOut);
     }
 }
 
@@ -47,14 +44,29 @@ function power() {
         numOut = 1/numOut;
     }
 
-    if (isNaN(numOut) || isNaN(num1) || isNaN(num2)) {
-        document.getElementById("output").innerHTML = "Please enter two numbers.";
-    } else {
-        document.getElementById("output").innerHTML = String(numOut);
-    }
+    outputProcessing(numOut);
 }
 
 function clearInputs() {
     document.getElementById("num1").value = "";
     document.getElementById("num2").value = "";
+}
+
+// Helper functions for better abstraction
+// reference: https://www.w3schools.com/js/js_htmldom_css.asp
+function ifNegative(numOut) {
+    if (numOut < 0) {
+        document.getElementById("output").style.color = "red";
+    } else {
+        document.getElementById("output").style.color = "black";
+    }
+}
+
+function outputProcessing(numOut) {
+    ifNegative(numOut);
+    if (isNaN(numOut)) {
+        document.getElementById("output").innerHTML = "Please enter two numbers.";
+    } else {
+        document.getElementById("output").innerHTML = String(numOut);
+    }
 }
