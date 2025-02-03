@@ -5,19 +5,23 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: blanchedalmond;
 }
 
 #page-wrap {
     width: 70%;
     margin: 0 auto;
+    background-color: blanchedalmond;
 }
 
 header {
     display: flex;
     flex-direction: column;
-    /*background-color: white;*/
+    background-color: darkolivegreen;
     padding: 1vw 1vh;
+}
+
+h1, header p {
+    color: beige;
 }
 
 nav {
