@@ -39,6 +39,8 @@ nav a {
 
 main {
     width: 70%;
+    height: 100vh;
+    margin: 1vh;
 }
 
 footer {
