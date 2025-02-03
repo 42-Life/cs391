@@ -4,19 +4,22 @@
 }
 
 #page-wrap {
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 
 header {
     display: flex;
     flex-direction: column;
+    background-color: white;
     padding: 1vw 1vh;
+
+    /*position: sticky;*/
+    /*top: 0;*/
 }
 
 nav {
     width: 30%;
-
 }
 
 nav ul {
@@ -49,6 +52,20 @@ footer {
     padding: 1vh 1vw;
 }
 
+#two_columns {
+    display: flex;
+    flex-direction: row;
+}
+
+#column-left {
+    flex: 20%;
+    margin: 1vh;
+}
+
+#column-right {
+    flex: 80%;
+}
+
 /* Media Queries: CSS only applied to mobile devices */
 @media screen and (max-width: 768px) {
     header {
@@ -78,5 +95,9 @@ footer {
 
     main {
         width: 100%;
+    }
+
+    #two_columns {
+        flex-direction: column;
     }
 }

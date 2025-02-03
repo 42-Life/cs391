@@ -15,43 +15,47 @@
             <script src="projects.js"></script>
         </header>
 
-        <!-- NAV -->
-        <nav>
-            <ul>
-                <li><a href="../index/index.html">Home</a></li>
-                <li><a href="../education/education.html">Education</a></li>
-                <li><a href="../prof-experiences/prof-experiences.html">Employment</a></li>
-                <li><a href="../extra-experiences/extra-experiences.html">Additional Experience</a></li>
-                <li><a href="../competencies-coursework/competencies-coursework.html">Skills & Coursework</a></li>
-                <li><a href="../portfolio/portfolio.html">Portfolio</a></li>
-                <li><a href="../projects/projects.html">Projects</a></li>
-            </ul>
-        </nav>
+        <div id="two_columns">
+            <!-- NAV -->
+            <nav id="column-left">
+                <ul>
+                    <li><a href="../index/index.html">Home</a></li>
+                    <li><a href="../education/education.html">Education</a></li>
+                    <li><a href="../prof-experiences/prof-experiences.html">Employment</a></li>
+                    <li><a href="../extra-experiences/extra-experiences.html">Additional Experience</a></li>
+                    <li><a href="../competencies-coursework/competencies-coursework.html">Skills & Coursework</a></li>
+                    <li><a href="../portfolio/portfolio.html">Portfolio</a></li>
+                    <li><a href="../projects/projects.html">Projects</a></li>
+                </ul>
+            </nav>
 
-        <!-- MAIN -->
-        <main>
-            <!-- PRE-AMBLE -->
-            <h3>Projects</h3>
-            <p>Projects and a functional calculator can be found on this page.</p>
+            <!-- MAIN -->
+            <main id="column-right">
+                <!-- PRE-AMBLE -->
+                <h3>Projects</h3>
+                <p>Projects and a functional calculator can be found on this page.</p>
 
 
-            <!-- PROMPT -->
-            <h4>Please enter two numbers, and select an operation</h4>
+                <!-- PROMPT -->
+                <h4>Please enter two numbers, and select an operation</h4>
 
-            <!-- INPUTS -->
-            <input id="num1" class="inputNumber">
-            <input id="num2" class="inputNumber">
+                <!-- INPUTS -->
+                <label for="num1"></label>
+                <input id="num1" class="inputNumber">
+                <label for="num2"></label>
+                <input id="num2" class="inputNumber">
 
-            <!-- BUTTONS -->
-            <button onclick="addition()">+</button>
-            <button onclick="subtract()">-</button>
-            <button onclick="divide()">/</button>
-            <button onclick="power()">**</button>
-            <button onclick="clearInputs()">Clear</button>
+                <!-- BUTTONS -->
+                <button onclick="addition()">+</button>
+                <button onclick="subtract()">-</button>
+                <button onclick="divide()">/</button>
+                <button onclick="power()">**</button>
+                <button onclick="clearInputs()">Clear</button>
 
-            <!-- OUTPUT -->
-            <h4 id="output"></h4>
-        </main>
+                <!-- OUTPUT -->
+                <h4 id="output"></h4>
+            </main>
+        </div>
 
         <!-- FOOTER -->
         <footer>
