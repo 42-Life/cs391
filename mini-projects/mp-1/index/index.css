@@ -24,6 +24,10 @@ h1, header p {
     color: beige;
 }
 
+h4 {
+    margin: 2vh 0 0;
+}
+
 nav {
     width: 30%;
 }
@@ -56,6 +60,10 @@ footer {
     padding: 1vh 1vw;
     background-color: burlywood;
     width: 100%;
+}
+
+#label-and-input {
+    display: block;
 }
 
 #two_columns {
