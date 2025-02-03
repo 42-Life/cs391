@@ -50,6 +50,7 @@ function power() {
 function clearInputs() {
     document.getElementById("num1").value = "";
     document.getElementById("num2").value = "";
+    document.getElementById("output").innerHTML = "";
 }
 
 // Helper functions for better abstraction

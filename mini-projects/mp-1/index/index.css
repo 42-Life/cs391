@@ -3,6 +3,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: blanchedalmond;
+}
+
 #page-wrap {
     width: 70%;
     margin: 0 auto;
@@ -11,11 +16,8 @@
 header {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    /*background-color: white;*/
     padding: 1vw 1vh;
-
-    /*position: sticky;*/
-    /*top: 0;*/
 }
 
 nav {
@@ -47,9 +49,9 @@ main {
 }
 
 footer {
-    display: flex;
-    flex-direction: row;
     padding: 1vh 1vw;
+    background-color: burlywood;
+    width: 100%;
 }
 
 #two_columns {
@@ -58,12 +60,12 @@ footer {
 }
 
 #column-left {
-    flex: 20%;
-    margin: 1vh;
+    flex: 25%;
+    /*margin: 1vh;*/
 }
 
 #column-right {
-    flex: 80%;
+    flex: 75%;
 }
 
 /* Media Queries: CSS only applied to mobile devices */
@@ -72,25 +74,22 @@ footer {
         align-items: center;
     }
 
-    body {
-        align-items: center;
-    }
-
     nav {
         width: 100%;
-        margin: 1vh 1vw;
     }
 
     nav ul {
         display: flex;
         flex-direction: row;
+        justify-content: center;
     }
 
     nav li {
         text-align: center;
-        padding: 1vw;
-        display: inline;
-        border-right: 0.25vw solid black;
+        border-top: 0.25vw solid black;
+        border-left: 0.25vw solid black;
+        border-bottom: 0.25vw solid black;
+        align-content: center;
     }
 
     main {
@@ -99,5 +98,10 @@ footer {
 
     #two_columns {
         flex-direction: column;
+        width: 100%;
+    }
+
+    #page-wrap {
+        width: 100%;
     }
 }
