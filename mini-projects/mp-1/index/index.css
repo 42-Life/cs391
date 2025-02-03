@@ -1,5 +1,5 @@
 *{
-    margin:0;
+    margin: 0;
     box-sizing: border-box;
 }
 
@@ -8,7 +8,72 @@
     margin: 0 auto;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 1vh;
+}
+
 nav {
+    width: 30%;
 
 }
 
+nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+nav li {
+    list-style: none;
+    background-color: burlywood;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: darkslategrey;
+}
+
+main {
+    width: 70%;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    padding: 1vh 1vw;
+}
+
+/* Media Queries: CSS only applied to mobile devices */
+@media screen and (max-width: 768px) {
+    header {
+        align-items: center;
+    }
+
+    body {
+        align-items: center;
+    }
+
+    nav {
+        width: 100%;
+        margin: 1vh 1vw;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav li {
+        text-align: center;
+        padding: 1vw;
+        display: inline;
+        border-right: 0.25vw solid black;
+    }
+
+    main {
+        width: 100%;
+    }
+}
