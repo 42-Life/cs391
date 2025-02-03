@@ -28,6 +28,7 @@ nav ul {
 nav li {
     list-style: none;
     background-color: burlywood;
+    padding: 1vw;
 }
 
 nav a {
