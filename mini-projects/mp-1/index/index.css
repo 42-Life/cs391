@@ -17,31 +17,36 @@ header {
     display: flex;
     flex-direction: column;
     background-color: darkolivegreen;
-    padding: 1vw 1vh;
+    padding: 2vh 2vw;
 }
 
-h1, header p {
+h1, header p, footer p {
     color: beige;
 }
 
+#primary-content p {
+    padding-top: 0.5vh;
+}
+
 h4 {
-    margin: 2vh 0 0;
+    margin: 2vw 0 0;
 }
 
 nav {
     width: 30%;
+    height: 100vh;
+    background-color: burlywood;
 }
 
 nav ul {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 1vh 0 0;
 }
 
 nav li {
     list-style: none;
-    background-color: burlywood;
-    padding: 1vw;
+    padding: 1.5vh 2vw;
 }
 
 nav a {
@@ -52,13 +57,12 @@ nav a {
 
 main {
     width: 70%;
-    height: 100vh;
-    margin: 1vh;
+    padding: 1vh 1vw;
 }
 
 footer {
     padding: 1vh 1vw;
-    background-color: burlywood;
+    background-color: darkolivegreen;
     width: 100%;
 }
 
@@ -78,6 +82,7 @@ footer {
 
 #column-right {
     flex: 75%;
+    margin: 0 1vw;
 }
 
 /* Media Queries: CSS only applied to mobile devices */
@@ -94,6 +99,7 @@ footer {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        padding: 0;
     }
 
     nav li {
@@ -102,6 +108,7 @@ footer {
         border-left: 0.25vw solid black;
         border-bottom: 0.25vw solid black;
         align-content: center;
+        padding: 2vh 1vw;
     }
 
     #two_columns {
