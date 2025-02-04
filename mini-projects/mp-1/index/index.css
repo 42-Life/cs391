@@ -104,10 +104,6 @@ footer {
         align-content: center;
     }
 
-    main {
-        width: 100%;
-    }
-
     #two_columns {
         flex-direction: column;
         width: 100%;
@@ -115,5 +111,13 @@ footer {
 
     #page-wrap {
         width: 100%;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    #primary-content {
+        height: 100vh;
     }
 }

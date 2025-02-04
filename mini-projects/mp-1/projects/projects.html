@@ -31,33 +31,35 @@
 
             <!-- MAIN -->
             <main id="column-right">
-                <!-- PRE-AMBLE -->
-                <h3>Projects</h3>
-                <p>Projects and a functional calculator can be found on this page.</p>
+                <div id="primary-content">
+                    <!-- PRE-AMBLE -->
+                    <h3>Projects</h3>
+                    <p>Projects and a functional calculator can be found on this page.</p>
 
 
-                <!-- PROMPT -->
-                <h4>Please enter two numbers, and select an operation</h4>
+                    <!-- PROMPT -->
+                    <h4>Please enter two numbers, and select an operation</h4>
 
-                <!-- INPUTS -->
-                <div id="label-and-input">
-                    <label for="num1">Enter your first number:</label>
-                    <input id="num1" class="inputNumber">
+                    <!-- INPUTS -->
+                    <div id="label-and-input">
+                        <label for="num1">Enter your first number:</label>
+                        <input id="num1" class="inputNumber">
+                    </div>
+                    <div id="label-and-output">
+                        <label for="num2">Enter your second number:</label>
+                        <input id="num2" class="inputNumber">
+                    </div>
+
+                    <!-- BUTTONS -->
+                    <button onclick="addition()">+</button>
+                    <button onclick="subtract()">-</button>
+                    <button onclick="divide()">/</button>
+                    <button onclick="power()">**</button>
+                    <button onclick="clearInputs()">Clear</button>
+
+                    <!-- OUTPUT -->
+                    <h4 id="output"></h4>
                 </div>
-                <div id="label-and-output">
-                    <label for="num2">Enter your second number:</label>
-                    <input id="num2" class="inputNumber">
-                </div>
-
-                <!-- BUTTONS -->
-                <button onclick="addition()">+</button>
-                <button onclick="subtract()">-</button>
-                <button onclick="divide()">/</button>
-                <button onclick="power()">**</button>
-                <button onclick="clearInputs()">Clear</button>
-
-                <!-- OUTPUT -->
-                <h4 id="output"></h4>
             </main>
         </div>
 
