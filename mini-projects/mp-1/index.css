@@ -9,6 +9,7 @@ body {
 
 #page-wrap {
     width: 70%;
+    height: 100%;
     margin: 0 auto;
     background-color: blanchedalmond;
 }
@@ -198,6 +199,7 @@ th, td {
     margin: 1vw 1vh;
 }
 
+
 /* Media Queries: CSS only applied to mobile devices */
 @media screen and (max-width: 768px) {
     header, #primary-content {
@@ -246,7 +248,8 @@ th, td {
     }
 
     #buttons {
-        margin-top: 0;
+        margin: auto;
+        width: 30%;
         align-self: center;
     }
 }
