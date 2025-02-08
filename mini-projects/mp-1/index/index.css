@@ -110,6 +110,11 @@ footer {
     font-size: calc(12px + 0.4vw);
 }
 
+.year-range {
+    padding-left: 0.7vw;
+    font-size: calc(12px + 0.4vw);
+}
+
 .subjects {
     margin-top: 0.5vw;
 }
