@@ -200,7 +200,7 @@ th, td {
 
 /* Media Queries: CSS only applied to mobile devices */
 @media screen and (max-width: 768px) {
-    header {
+    header, #primary-content {
         align-items: center;
     }
 
@@ -231,7 +231,6 @@ th, td {
 
     #page-wrap {
         width: 100%;
-        height: 100vh;
     }
 
     main {
@@ -240,5 +239,14 @@ th, td {
 
     #primary-content {
         height: 100vh;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, #label-and-input, #label-and-output  {
+        text-align: center;
+    }
+
+    #buttons {
+        margin-top: 0;
+        align-self: center;
     }
 }
