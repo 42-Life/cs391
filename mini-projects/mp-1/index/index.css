@@ -89,7 +89,9 @@ footer {
     display: flex;
 }
 
-.school-info {
+.school-info, .work-experience, .extra-experience,
+.grouped-content
+{
     margin: 2vw;
 }
 
@@ -97,7 +99,7 @@ footer {
     margin-top: 0.5vw;
 }
 
-.school-name {
+.school-name, .sub-topic {
     margin-bottom: 0.25vw;
     color: darkolivegreen;
 }
