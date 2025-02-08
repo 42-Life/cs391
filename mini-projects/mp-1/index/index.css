@@ -192,6 +192,11 @@ th, td {
     width: 50%;
 }
 
+.portfolio {
+    width: 70%;
+    margin: 1vw 1vh;
+}
+
 /* Media Queries: CSS only applied to mobile devices */
 @media screen and (max-width: 768px) {
     header {
