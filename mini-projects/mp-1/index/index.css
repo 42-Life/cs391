@@ -96,7 +96,15 @@ footer {
 .school-info, .work-experience, .extra-experience,
 .grouped-content
 {
-    margin: 2vw;
+    margin: 2vw 0;
+}
+
+.grouped-content-flex {
+    margin: 2vw 0;
+    display: flex;
+    flex-direction: column;
+    float: left;
+    width: 50%;
 }
 
 .title-subtitle {
@@ -158,13 +166,30 @@ h4 {
     font-size: calc(12px + 0.4vw);
 }
 
-p, li, label {
+p, li, td, label {
     font-size: calc(11px + 0.4vw);
 }
 
 #credits {
     text-decoration: underline;
     color: beige;
+}
+
+th, td {
+    padding: 0 1vw;
+    text-align: left;
+}
+
+.code {
+    width: 10%;
+}
+
+.class-name {
+    width: 40%;
+}
+
+.skills {
+    width: 50%;
 }
 
 /* Media Queries: CSS only applied to mobile devices */
