@@ -81,8 +81,6 @@ footer {
 
 #sidebar {
     background-color: burlywood;
-    display: flex;
-    flex-direction: column;
 }
 
 #column-left {
@@ -261,7 +259,8 @@ th, td {
     }
 
     #sidebar {
-        /*height: 0;*/
         background-color: white;
+        display: flex;
+        flex-direction: column;
     }
 }
