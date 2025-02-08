@@ -20,20 +20,12 @@ header {
     padding: 2vh 2vw;
 }
 
-h1, header p, footer p {
-    color: beige;
-}
-
 #primary-content p {
     padding-top: 0.5vh;
 }
 
-h4 {
-    margin: 2vw 0 0;
-}
-
 nav {
-    width: 30%;
+    width: 100%;
     height: 100vh;
     background-color: burlywood;
 }
@@ -75,14 +67,26 @@ footer {
     flex-direction: row;
 }
 
+#nav-wrap {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    /*height: 100vh;*/
+}
+
+#test {
+    flex: 25%;
+}
+
 #column-left {
     flex: 25%;
-    /*margin: 1vh;*/
+    height: 100vh;
 }
 
 #column-right {
     flex: 75%;
     margin: 0 1vw;
+    /*background-color: red;*/
 }
 
 #image {
@@ -93,6 +97,17 @@ footer {
 .grouped-content
 {
     margin: 2vw;
+}
+
+.title-subtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+.occupation {
+    padding-left: 1vw;
+    font-size: calc(12px + 0.4vw);
 }
 
 .subjects {
@@ -121,8 +136,25 @@ a {
     color: darkolivegreen;
 }
 
+h1, header p, footer p {
+    color: beige;
+}
+
 h2 {
     margin: 1vw 0;
+}
+
+h3 {
+    font-size: calc(14px + 0.5vw);
+}
+
+h4 {
+    margin: 2vw 0 0;
+    font-size: calc(12px + 0.4vw);
+}
+
+p, li, label {
+    font-size: calc(11px + 0.4vw);
 }
 
 #credits {
@@ -163,6 +195,7 @@ h2 {
 
     #page-wrap {
         width: 100%;
+        height: 100vh;
     }
 
     main {
