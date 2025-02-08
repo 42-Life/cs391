@@ -79,9 +79,16 @@ footer {
     flex: 25%;
 }
 
+#sidebar {
+    background-color: burlywood;
+    display: flex;
+    flex-direction: column;
+}
+
 #column-left {
     flex: 25%;
     height: 100vh;
+    align-items: stretch;
 }
 
 #column-right {
@@ -251,5 +258,10 @@ th, td {
         margin: auto;
         width: 30%;
         align-self: center;
+    }
+
+    #sidebar {
+        /*height: 0;*/
+        background-color: white;
     }
 }
