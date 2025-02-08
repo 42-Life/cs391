@@ -85,6 +85,49 @@ footer {
     margin: 0 1vw;
 }
 
+#image {
+    display: flex;
+}
+
+.school-info {
+    margin: 2vw;
+}
+
+.subjects {
+    margin-top: 0.5vw;
+}
+
+.school-name {
+    margin-bottom: 0.25vw;
+    color: darkolivegreen;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+    margin: 1.5vw auto;
+    align-self: center;
+    border: 5px solid darkslategrey;
+}
+
+.body-text {
+    margin-bottom: 1vw;
+}
+
+a {
+    text-decoration: none;
+    color: darkolivegreen;
+}
+
+h2 {
+    margin: 1vw 0;
+}
+
+#credits {
+    text-decoration: underline;
+    color: beige;
+}
+
 /* Media Queries: CSS only applied to mobile devices */
 @media screen and (max-width: 768px) {
     header {
