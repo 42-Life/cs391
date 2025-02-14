@@ -25,6 +25,7 @@ function divide() {
     } else {
         document.getElementById("output").innerHTML = String(numOut);
     }
+    outputProcessing(numOut);
 }
 
 function power() {
