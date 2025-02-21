@@ -4,10 +4,3 @@ export type Card = {
     suit: string;
     image: string;
 }
-
-export type Deck = {
-    success: boolean;
-    deck_id: string;
-    remaining: number;
-    cards: Card[];
-}

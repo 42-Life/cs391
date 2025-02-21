@@ -1,5 +1,4 @@
 import styled from "styled-components";
-// import CardsDisplay from "./CardsDisplay.tsx";
 import { Card } from "../types.ts";
 
 const CardDisplayDiv = styled.div`
@@ -12,7 +11,6 @@ const CardDisplayDiv = styled.div`
 export default function CardsComponent({cns}: {cns: Card[]} ) {
     return (
         <>
-            {/*<h3>Welcome to the game. Here is a deck of 4 cards.</h3>*/}
             {
                 cns.map((c:Card, i:number) =>
                     <CardDisplayDiv key={i}>
@@ -22,10 +20,7 @@ export default function CardsComponent({cns}: {cns: Card[]} ) {
                 )
             }
         </>
-        // <CardDisplayDiv className="singleCard">
-        //     <img src={cards[cardNum].image} alt="card image" />
-        //     <p>{deck.cards[cardNum].value} of {deck.cards[cardNum].suit.toLowerCase()}</p>
-        // </CardDisplayDiv>
+
     )
 
 }
