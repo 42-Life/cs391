@@ -1,12 +1,12 @@
 /* importing necessary dependencies & packages */
 import {useState, useEffect} from "react";
-import CardsPreview from "./CardsPreview.tsx";
-import {Card} from "../types.ts";
-
+import {Card, Deck} from "../types.ts";
+import CardComponent from "./CardComponent.tsx";
 
 export default function CardsContent() {
     /* useState hook : storage of API data */
     const [cards, setCards] = useState<Card[]>([]);       /* Loads card data */
+    const [deck, setDeck] = useState<Deck>();         /* Loads a new deck */
 
     /* useState hook: number of cards to be displayed */
     const [numCards, setNumCards] = useState(0);
@@ -35,7 +35,7 @@ export default function CardsContent() {
 
             <div>
                 {
-                    cards.map((Deck) => (<CardsPreview card={card}/>))
+                    cards.map((card) => (<CardComponent card={card}/>))
                     // for every card, load an associated CardPreview component
                 }
             </div>
