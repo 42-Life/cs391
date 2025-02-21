@@ -1,10 +1,10 @@
-import CardsContent from "./components/CardsContent.tsx";
 import  './App.css'
-/* App returns the child component CardsContent */
+import CardsDisplay from "./components/CardsDisplay.tsx";
+/* App returns the child component CardsDisplay */
 
 
 export default function App(){
     return (
-        <CardsContent/>
+        <CardsDisplay/>
     )
 }

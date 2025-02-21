@@ -1,7 +1,7 @@
 /* importing necessary dependencies & packages */
 import {useState, useEffect} from "react";
 import {Card, Deck} from "../types.ts";
-import CardComponent from "./CardComponent.tsx";
+import CardComponent from "./CardsComponent.tsx";
 
 export default function CardsContent() {
     /* useState hook : storage of API data */
