@@ -1,15 +1,15 @@
 import styled from "styled-components";
-import { Card, Deck } from "../types.ts";
+import { Deck } from "../types.ts";
 
 const CardDisplayDiv = styled.div`
     /* CSS styling for Cards Preview Div goes here */
 `;
 
-export default function CardComponent({card}: {card: Card}) {
+export default function CardComponent({deck}: {deck: Deck}, {cardNum} : {cardNum: number}) {
     return (
         <CardDisplayDiv className="singleCard">
-            <img src={card.image} alt="card image" />
-            <p>{card.value} of {card.suit.toLowerCase()}</p>
+            <img src={deck.cards[cardNum].image} alt="card image" />
+            <p>{deck.cards[cardNum].value} of {deck.cards[cardNum].suit.toLowerCase()}</p>
         </CardDisplayDiv>
     )
 

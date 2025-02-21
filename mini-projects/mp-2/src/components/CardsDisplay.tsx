@@ -1,10 +1,10 @@
 /* importing necessary dependencies & packages */
 import {useState, useEffect} from "react";
-import {Card, /* Deck */} from "../types.ts";
+import {Card, Deck} from "../types.ts";
 import CardComponent from "./CardComponent.tsx";
 
 export default function CardsDisplay() {
-    // const [deck, setDeck] = useState<Deck>();
+    const [deck, setDeck] = useState<Deck>();
     const [cards, setCards] = useState<Card[]>([]);
     const [numCards, setNumCards] = useState(4);
 
@@ -30,11 +30,14 @@ export default function CardsDisplay() {
             const cards = await fetch(cardAPI);
             const {results} = await cards.json();
             setCards(results);
+            setDeck(results);
         }
         pickCards()
             .then(() => console.log(`Selected ${numCards} cards successfully`))
             .catch((e) => console.log("Error picking cards" + e));
-    }, [cards]);
+    }, [cards, deck]);
+
+    console.log(cards);  // undefined
 
     return (
         <div>
@@ -46,7 +49,9 @@ export default function CardsDisplay() {
             />
             <div>
                 {
-                    cards.map((card) => (<CardComponent card={card}/>))
+                    <CardComponent deck={deck} cardNum={0}></CardComponent>
+                    // deck.cards.map((card, i) => (<CardComponent deck={deck} key={i} />))
+                    // cards.map((card) => (<CardComponent card={card}/>))
                 }
             </div>
         </div>
