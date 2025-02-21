@@ -9,13 +9,14 @@ const CardDisplayDiv = styled.div`
 `;
 
 
-export default function CardsComponent(props ) {
+export default function CardsComponent({cns}: {cns: Card[]} ) {
     return (
         <>
+            {/*<h3>Welcome to the game. Here is a deck of 4 cards.</h3>*/}
             {
-                props.cns.map((c:Card, i:number) =>
+                cns.map((c:Card, i:number) =>
                     <CardDisplayDiv key={i}>
-                        <h2>{c.suit}</h2>
+                        <h2>{c.value} OF {c.suit}</h2>
                         <img src={c.image} alt={c.suit}/>
                     </CardDisplayDiv>
                 )
