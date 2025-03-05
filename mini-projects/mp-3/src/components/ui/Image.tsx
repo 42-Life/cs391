@@ -7,3 +7,7 @@ export const Image = styled.img`
     align-self: center;
     border: 5px solid darkslategrey;
 `;
+
+// export default function ImageComponent() {
+//     return(<Image></Image>);
+// }
