@@ -1,9 +1,11 @@
-import Main from "../primary-tags/Main.tsx";
+import {NewMain} from "../primary-tags/NewMain.tsx";
+import {StyledWrapper} from "./StyledWrapper.tsx";
+import {TwoColumnLayout} from "./TwoColumnLayout.tsx";
 import Header from "../primary-tags/Header.tsx";
 import Footer from "../primary-tags/Footer";
 import Nav from "../primary-tags/Nav";
-import TwoColumnLayout from "./TwoColumnLayout.tsx";
-import {StyledWrapper} from "./StyledWrapper.tsx";
+// import TwoColumnLayout from "./TwoColumnLayout.tsx";
+
 
 export default function PageWrap() {
     return (
@@ -11,12 +13,7 @@ export default function PageWrap() {
             <Header/>
             <TwoColumnLayout>
                 <Nav></Nav>
-                <Main props={{
-                    pageTitle: "",
-                    subtitle: "",
-                    hasImage: false
-                }}>
-                </Main>
+                <NewMain></NewMain>
             </TwoColumnLayout>
             <Footer/>
         </StyledWrapper>

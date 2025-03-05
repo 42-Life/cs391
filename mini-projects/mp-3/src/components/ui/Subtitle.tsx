@@ -1,12 +1,14 @@
-import TextX from "./TextX.tsx";
+// import TextX from "./TextX.tsx";
+import styled from "styled-components";
 
-export default function Subtitle() {
+const StyledSubtitle = styled.h2`
+    color: darkolivegreen;
+    font-size: calc(14px + 0.5vw);
+`
+export default function Subtitle({text}: {text: string}) {
     return(
-        <TextX props={{
-            base: 15,
-            increment: 0.7,
-            textType: "h2",
-            text: "testing",
-        }}></TextX>
+        <StyledSubtitle>
+            {text}
+        </StyledSubtitle>
     );
 }

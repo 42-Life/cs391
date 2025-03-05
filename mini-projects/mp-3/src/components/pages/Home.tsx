@@ -1,9 +1,12 @@
 import {StyledWrapper} from "../ui/StyledWrapper.tsx";
 import Header from "../primary-tags/Header.tsx";
-import TwoColumnLayout from "../ui/TwoColumnLayout.tsx";
+import {TwoColumnLayout} from "../ui/TwoColumnLayout.tsx";
 import Nav from "../primary-tags/Nav.tsx";
-import Main from "../primary-tags/Main.tsx";
+// import Main from "../primary-tags/Main.tsx";
 import Footer from "../primary-tags/Footer.tsx";
+import {NewMain} from "../primary-tags/NewMain.tsx";
+import Title from "../ui/Title.tsx";
+
 
 export default function Home() {
     return (
@@ -11,12 +14,9 @@ export default function Home() {
             <Header/>
             <TwoColumnLayout>
                 <Nav></Nav>
-                <Main props={{
-                    pageTitle: "Home",
-                    subtitle: "",
-                    hasImage: false
-                }}>
-                </Main>
+                <NewMain>
+                    <Title text={"Home"}></Title>
+                </NewMain>
             </TwoColumnLayout>
             <Footer/>
         </StyledWrapper>
