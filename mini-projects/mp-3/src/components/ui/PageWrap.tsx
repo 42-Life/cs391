@@ -4,8 +4,6 @@ import {TwoColumnLayout} from "./TwoColumnLayout.tsx";
 import Header from "../primary-tags/Header.tsx";
 import Footer from "../primary-tags/Footer";
 import Nav from "../primary-tags/Nav";
-// import TwoColumnLayout from "./TwoColumnLayout.tsx";
-
 
 export default function PageWrap() {
     return (

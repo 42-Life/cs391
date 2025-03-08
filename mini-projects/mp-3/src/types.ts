@@ -11,8 +11,10 @@ export type textSpecs = {
 
 export type pageSpecs = {
     pageTitle: string;
-    subtitle: string;
+    subtitle?: string;
     hasImage: boolean;
+    imageSource?: string;
+    imageAlt?: string;
 }
 
 export type TieredInfo = {

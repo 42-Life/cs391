@@ -1,14 +1,12 @@
-import {StyledWrapper} from "../ui/StyledWrapper.tsx";
 import Header from "../primary-tags/Header.tsx";
-import {TwoColumnLayout} from "../ui/TwoColumnLayout.tsx";
 import Nav from "../primary-tags/Nav.tsx";
 // import Main from "../primary-tags/Main.tsx";
 import Footer from "../primary-tags/Footer.tsx";
 import {NewMain} from "../primary-tags/NewMain.tsx";
-import Title from "../ui/Title.tsx";
-import {GreenLink} from "../ui/GreenLink.tsx";
+import {GreenLink, PageTitle} from "../ui/StyledText.tsx";
+import {StyledWrapper, TwoColumnLayout, ImageHolder} from "../ui/StyledDivs.tsx";
 import {Image} from "../ui/Image.tsx";
-import {ImageHolder} from "../ui/ImageHolder.tsx";
+// import Main from "../primary-tags/Main.tsx";
 
 export default function Home() {
     return (
@@ -17,7 +15,7 @@ export default function Home() {
             <TwoColumnLayout>
                 <Nav></Nav>
                 <NewMain>
-                    <Title text={"Home"}></Title>
+                    <PageTitle>Home</PageTitle>
                     <ImageHolder>
                         <Image src={'/profile.jpg'} alt={'profile picture'}></Image>
                     </ImageHolder>

@@ -1,12 +1,10 @@
-import {StyledWrapper} from "../ui/StyledWrapper.tsx";
 import Header from "../primary-tags/Header.tsx";
-import {TwoColumnLayout} from "../ui/TwoColumnLayout.tsx";
 import Nav from "../primary-tags/Nav.tsx";
 import Footer from "../primary-tags/Footer.tsx";
 import {NewMain} from "../primary-tags/NewMain.tsx";
-import Title from "../ui/Title.tsx";
-import {TableGroup} from "../ui/TableGroup.tsx";
+import {StyledWrapper, TwoColumnLayout, TableGroup} from "../ui/StyledDivs.tsx";
 import {PortfolioImage} from "../ui/PortfolioImage.tsx";
+import {PageTitle} from "../ui/StyledText.tsx";
 
 export default function Portfolio() {
     return(
@@ -15,7 +13,7 @@ export default function Portfolio() {
             <TwoColumnLayout>
                 <Nav></Nav>
                 <NewMain>
-                    <Title text={"Portfolio"}/>
+                    <PageTitle>Portfolio</PageTitle>
                     <p>Outside of my professional interest in computer science and information technology, I have a vested interest in photography. Samples of my artistic work can be found here.</p>
 
                     <TwoColumnLayout>

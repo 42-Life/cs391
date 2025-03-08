@@ -1,15 +1,12 @@
-import {StyledWrapper} from "../ui/StyledWrapper.tsx";
 import Header from "../primary-tags/Header.tsx";
-import {TwoColumnLayout} from "../ui/TwoColumnLayout.tsx";
 import Nav from "../primary-tags/Nav.tsx";
 import Footer from "../primary-tags/Footer.tsx";
 import {NewMain} from "../primary-tags/NewMain.tsx";
-import Title from "../ui/Title.tsx";
-import Subtitle from "../ui/Subtitle.tsx";
+import {PageTitle, StyledSubtitle} from "../ui/StyledText.tsx";
 import {TieredUL} from "../ui/TieredUL.tsx";
 import TableHead from "../ui/TableHead.tsx";
 import TableRow from "../ui/TableRow.tsx";
-import {TableGroup} from "../ui/TableGroup.tsx";
+import {StyledWrapper, TableGroup, TwoColumnLayout} from "../ui/StyledDivs.tsx";
 
 export default function CompAndCourses() {
     return(
@@ -18,10 +15,10 @@ export default function CompAndCourses() {
             <TwoColumnLayout>
                 <Nav></Nav>
                 <NewMain>
-                    <Title text={"Competencies & Coursework"}></Title>
+                    <PageTitle>Competencies & Coursework</PageTitle>
                     <p>Skills, competencies, and relevant university coursework can be found here.</p>
 
-                    <Subtitle text={"Computer Science Courswork"}/>
+                    <StyledSubtitle>Computer Science Coursework</StyledSubtitle>
                     <table>
                         <tr>
                             <TableHead props={{headerWidth: 10, headerName: "Class#"}}></TableHead>
@@ -38,7 +35,7 @@ export default function CompAndCourses() {
                         <tr><TableRow props={{courseInfo: ["CS391", "Web Application Development", "HTML, CSS, JavaScript, React, Node.js"]}}/></tr>
                     </table>
 
-                    <Subtitle text={"Elective Courswork"}/>
+                    <StyledSubtitle>Elective Coursework</StyledSubtitle>
                     <table>
                         <tr>
                             <TableHead props={{headerWidth: 10, headerName: "Class#"}}></TableHead>
@@ -53,7 +50,7 @@ export default function CompAndCourses() {
                     
                     <TwoColumnLayout>
                         <TableGroup>
-                            <Subtitle text={"Languages and Software"}/>
+                            <StyledSubtitle>Languages and Software</StyledSubtitle>
                             <TieredUL props={{
                                 listLevel1: ["Python", "Java", "C", "OCaml", "HTML, CSS, JavaScript", "React & Node.js", "Adobe Photoshop & Lightroom", "Adobe InDesign & Illustrator"],
                                 listLevel2: []
@@ -61,7 +58,7 @@ export default function CompAndCourses() {
                         </TableGroup>
 
                         <TableGroup>
-                            <Subtitle text={"Soft Skills"}/>
+                            <StyledSubtitle>Soft Skills</StyledSubtitle>
                             <TieredUL props={{
                                 listLevel1: ["Leadership", "Dedication", "Public Speaking", "Commitment to learning", "Communication & Writing"],
                                 listLevel2: ["Written Communication", "Verbal Communication", "Technical Documentation"]

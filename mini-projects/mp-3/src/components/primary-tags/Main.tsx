@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 import {pageSpecs} from "../../types.ts";
-import Title from "../ui/Title.tsx";
-// import {Title} from "../ui/Title.tsx";
-// import {PageTitleType} from "../../types.ts";
+import {PageTitle, StyledSubtitle} from "../ui/StyledText.tsx";
+import {Image} from "../ui/Image.tsx";
+import {ImageHolder} from "../ui/StyledDivs.tsx";
 
 const StyledMain = styled.main`
     width: 70%;
@@ -12,23 +12,21 @@ const StyledMain = styled.main`
     margin: 0 1vw;
 `;
 
-// {children}:{children: React.ReactElement}
-
 export default function Main({props}:{props:pageSpecs}) {
+    function otherInfo() {
+        return( (props.hasImage) ? <p>{props.subtitle}</p> :
+            <ImageHolder><Image src={props.imageSource} alt={props.imageAlt}></Image></ImageHolder> )
+    }
+
+    function hasSubtitle() {
+        return (props.subtitle != null ? <StyledSubtitle>{props.subtitle}</StyledSubtitle> : <></>);
+    }
+
     return (
         <StyledMain>
-            <Title text={props.pageTitle}></Title>
-            <p>{props.subtitle}</p>
+            <PageTitle>{props.pageTitle}</PageTitle>
+            {otherInfo()}
+            {hasSubtitle()}
         </StyledMain>
     );
 }
-
-// export default function Main({children}:{children:React.ReactNode}) {
-//     return (
-//         <StyledMain>
-//             {children}
-//         </StyledMain>
-//     );
-// }
-
-// Main was always #column-right. Nav was always #column-left

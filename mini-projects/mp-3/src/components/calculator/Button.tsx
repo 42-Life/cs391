@@ -11,5 +11,13 @@ export const Button = styled.button`
     margin: 0.5vh 0.5vw;
     padding: 2.5vh 2.5vw;
     border-radius: 30%;
-    
 `;
+
+export const ButtonDiv = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 0.5vw;
+`;
+

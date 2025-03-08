@@ -1,26 +1,26 @@
 import {TieredInfo} from "../../types.ts";
 
-function generateListLevel1({props}:{props: TieredInfo}) {
-    const schoolInfo = props.listLevel1;
-
-    return(
-        schoolInfo.map((info:string) =>
-            <li>{info}</li>
-        )
-    );
-}
-
-function generateListLevel2({props}:{props: TieredInfo}) {
-    const subs = props.listLevel2;
-
-    return(
-        subs.map((subject:string) =>
-            <li>{subject}</li>
-        )
-    );
-}
-
 export function TieredUL({props}:{props: TieredInfo}) {
+    function generateListLevel1({props}:{props: TieredInfo}) {
+        const schoolInfo = props.listLevel1;
+
+        return(
+            schoolInfo.map((info:string) =>
+                <li>{info}</li>
+            )
+        );
+    }
+
+    function generateListLevel2({props}:{props: TieredInfo}) {
+        const subs = props.listLevel2;
+
+        return(
+            subs.map((subject:string) =>
+                <li>{subject}</li>
+            )
+        );
+    }
+
     return(
         <ul>
             {generateListLevel1({props})}

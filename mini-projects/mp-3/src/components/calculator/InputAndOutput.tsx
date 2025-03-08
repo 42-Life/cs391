@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {ButtonDiv} from "./Button.tsx";
 
 export const InOut = styled.div`
     display: flex;
@@ -21,3 +22,7 @@ export const Input = styled.input`
     background-color: cornsilk;
     margin-bottom: 1vh;
 `;
+
+export const InputDiv = styled(ButtonDiv)`
+    //gap: 1vw;
+`
