@@ -1,6 +1,5 @@
 import {NewMain} from "../primary-tags/NewMain.tsx";
-import {StyledWrapper} from "./StyledWrapper.tsx";
-import {TwoColumnLayout} from "./TwoColumnLayout.tsx";
+import {TwoColumnLayout, StyledWrapper} from "./StyledDivs.tsx";
 import Header from "../primary-tags/Header.tsx";
 import Footer from "../primary-tags/Footer";
 import Nav from "../primary-tags/Nav";

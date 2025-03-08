@@ -2,6 +2,8 @@ import {useState} from "react";
 import {InOut, Input, InputDiv} from "./InputAndOutput.tsx";
 import {Button, ButtonDiv} from "./Button.tsx";
 import styled from "styled-components";
+import {SmallScreenTextStyling} from "../MediaQuery.tsx";
+import {StyledLabel} from "../ui/StyledText.tsx";
 
 function power(x: number, y: number): number {
     let out = 1;
@@ -67,6 +69,7 @@ export default function Calculator() {
         color: ${Number(output) < 0 ? "red" : "black"};
         align-self: center;
         font-size: calc(20px + 0.5vw);
+        ${SmallScreenTextStyling};
     `;
 
     return(
@@ -79,6 +82,7 @@ export default function Calculator() {
                     type={"number"}
                     onChange={(e) => {setNum1(e.target.value)}}
                 />
+                <StyledLabel>Number 1</StyledLabel>
             </InOut>
             <InOut>
                 <Input
@@ -87,6 +91,7 @@ export default function Calculator() {
                     type={"number"}
                     onChange={(e) => {setNum2(e.target.value)}}
                 />
+                <StyledLabel>Number 2</StyledLabel>
             </InOut>
         </InputDiv>
             <ButtonDiv>

@@ -4,7 +4,7 @@ import Footer from "../primary-tags/Footer.tsx";
 import {NewMain} from "../primary-tags/NewMain.tsx";
 import {TieredUL} from "../ui/TieredUL.tsx";
 import {StyledWrapper, TwoColumnLayout, GroupedContent} from "../ui/StyledDivs.tsx";
-import {PageTitle, StyledSubtitle} from "../ui/StyledText.tsx";
+import {PageText, PageTitle, StyledSubtitle} from "../ui/StyledText.tsx";
 
 export default function Education() {
     return(
@@ -14,7 +14,7 @@ export default function Education() {
                 <Nav></Nav>
                 <NewMain>
                     <PageTitle>Education</PageTitle>
-                    <p>My educational background can be found here.</p>
+                    <PageText>My educational background can be found here.</PageText>
 
                     <GroupedContent>
                         <StyledSubtitle>Boston University</StyledSubtitle>

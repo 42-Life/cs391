@@ -3,7 +3,7 @@ import Nav from "../primary-tags/Nav.tsx";
 import Footer from "../primary-tags/Footer.tsx";
 import {TieredUL} from "../ui/TieredUL.tsx";
 import {NewMain} from "../primary-tags/NewMain.tsx";
-import {PageTitle, StyledSubtitle} from "../ui/StyledText.tsx";
+import {PageText, PageTitle, StyledSubtitle} from "../ui/StyledText.tsx";
 import {StyledWrapper, TwoColumnLayout, GroupedContent} from "../ui/StyledDivs.tsx";
 
 export default function ProfExps() {
@@ -14,7 +14,7 @@ export default function ProfExps() {
                 <Nav></Nav>
                 <NewMain>
                     <PageTitle>Professional Experience</PageTitle>
-                    <p>Current and previous employment and corresponding responsibilities can be found here.</p>
+                    <PageText>Current and previous employment and corresponding responsibilities can be found here.</PageText>
 
                     <GroupedContent>
                         <StyledSubtitle>BU Today</StyledSubtitle>

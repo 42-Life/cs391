@@ -2,7 +2,7 @@ import Header from "../primary-tags/Header.tsx";
 import Nav from "../primary-tags/Nav.tsx";
 import Footer from "../primary-tags/Footer.tsx";
 import {NewMain} from "../primary-tags/NewMain.tsx";
-import {PageTitle, StyledSubtitle} from "../ui/StyledText.tsx";
+import {PageText, PageTitle, StyledSubtitle} from "../ui/StyledText.tsx";
 import {TieredUL} from "../ui/TieredUL.tsx";
 import TableHead from "../ui/TableHead.tsx";
 import TableRow from "../ui/TableRow.tsx";
@@ -16,7 +16,7 @@ export default function CompAndCourses() {
                 <Nav></Nav>
                 <NewMain>
                     <PageTitle>Competencies & Coursework</PageTitle>
-                    <p>Skills, competencies, and relevant university coursework can be found here.</p>
+                    <PageText>Skills, competencies, and relevant university coursework can be found here.</PageText>
 
                     <StyledSubtitle>Computer Science Coursework</StyledSubtitle>
                     <table>

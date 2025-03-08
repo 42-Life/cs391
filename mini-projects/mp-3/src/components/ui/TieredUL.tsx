@@ -1,4 +1,5 @@
 import {TieredInfo} from "../../types.ts";
+import {StyledLi} from "./StyledText.tsx";
 
 export function TieredUL({props}:{props: TieredInfo}) {
     function generateListLevel1({props}:{props: TieredInfo}) {
@@ -6,7 +7,7 @@ export function TieredUL({props}:{props: TieredInfo}) {
 
         return(
             schoolInfo.map((info:string) =>
-                <li>{info}</li>
+                <StyledLi>{info}</StyledLi>
             )
         );
     }
@@ -16,7 +17,7 @@ export function TieredUL({props}:{props: TieredInfo}) {
 
         return(
             subs.map((subject:string) =>
-                <li>{subject}</li>
+                <StyledLi>{subject}</StyledLi>
             )
         );
     }

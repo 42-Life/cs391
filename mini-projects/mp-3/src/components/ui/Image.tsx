@@ -9,6 +9,7 @@ export const Image = styled.img`
     border: 5px solid darkslategrey;
 `;
 
-// export default function ImageComponent() {
-//     return(<Image></Image>);
-// }
+export const PortfolioImage = styled(Image)`
+    width: 70%;
+    margin: 1vw 1vh;
+`;

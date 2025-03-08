@@ -11,6 +11,7 @@ export const Button = styled.button`
     margin: 0.5vh 0.5vw;
     padding: 2.5vh 2.5vw;
     border-radius: 30%;
+    
 `;
 
 export const ButtonDiv = styled.div`
@@ -19,5 +20,11 @@ export const ButtonDiv = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     padding: 0 0.5vw;
+
+    @media screen and (max-width: 768px) {
+        margin: auto;
+        width: 30%;
+        align-self: center;
+    }
 `;
 

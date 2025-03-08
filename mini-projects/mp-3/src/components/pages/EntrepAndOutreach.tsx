@@ -4,7 +4,7 @@ import Footer from "../primary-tags/Footer.tsx";
 import {NewMain} from "../primary-tags/NewMain.tsx";
 import {TieredUL} from "../ui/TieredUL.tsx";
 import {StyledWrapper, TwoColumnLayout, GroupedContent} from "../ui/StyledDivs.tsx";
-import {PageTitle, StyledSubtitle} from "../ui/StyledText.tsx";
+import {PageText, PageTitle, StyledSubtitle} from "../ui/StyledText.tsx";
 
 export default function EntrepAndOutreach() {
     return(
@@ -14,7 +14,7 @@ export default function EntrepAndOutreach() {
                 <Nav></Nav>
                 <NewMain>
                     <PageTitle>Entrepreneurship & Outreach</PageTitle>
-                    <p>Developmental experiences and volunteer projects outside of employment can be found here.</p>
+                    <PageText>Developmental experiences and volunteer projects outside of employment can be found here.</PageText>
 
                     <GroupedContent>
                         <StyledSubtitle>AH Photography</StyledSubtitle>
