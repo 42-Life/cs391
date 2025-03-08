@@ -20,6 +20,7 @@ export default function CompAndCourses() {
 
                     <StyledSubtitle>Computer Science Coursework</StyledSubtitle>
                     <table>
+                        <tbody>
                         <tr>
                             <TableHead props={{headerWidth: 10, headerName: "Class#"}}></TableHead>
                             <TableHead props={{headerWidth: 40, headerName: "Course Name"}}></TableHead>
@@ -33,10 +34,12 @@ export default function CompAndCourses() {
                         <tr><TableRow props={{courseInfo: ["CS237", "Probability in Computing", "Visualisation, Randomised algorithms"]}}/></tr>
                         <tr><TableRow props={{courseInfo: ["CS320", "Concepts of PLs", "OCaml, Interpreter Design, PLs"]}}/></tr>
                         <tr><TableRow props={{courseInfo: ["CS391", "Web Application Development", "HTML, CSS, JavaScript, React, Node.js"]}}/></tr>
+                        </tbody>
                     </table>
 
                     <StyledSubtitle>Elective Coursework</StyledSubtitle>
                     <table>
+                        <tbody>
                         <tr>
                             <TableHead props={{headerWidth: 10, headerName: "Class#"}}></TableHead>
                             <TableHead props={{headerWidth: 40, headerName: "Course Name"}}></TableHead>
@@ -46,6 +49,7 @@ export default function CompAndCourses() {
                         <tr><TableRow props={{courseInfo: ["LX250", "Intro to Linguistics", "Syntax, semantics and NLP application"]}}/></tr>
                         <tr><TableRow props={{courseInfo: ["WR153", "Every Life, A Story", "Storytelling and written communication"]}}/></tr>
                         <tr><TableRow props={{courseInfo: ["PH256", "Philosophy of Gender & Sexuality", "Argumentation, logic, and public speaking"]}}/></tr>
+                        </tbody>
                     </table>
                     
                     <TwoColumnLayout>
