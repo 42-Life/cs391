@@ -1,8 +1,8 @@
 
-export default function Artwork({color}:{color:string}) {
+export default function Artwork() {
     return(
         <h4>
-            Behold, a {color} artwork!
+            Behold, an artwork!
         </h4>
     );
 }

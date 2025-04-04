@@ -1,4 +1,3 @@
-"use client"
 
 import GetUserInfo from "@/components/get-user-info";
 

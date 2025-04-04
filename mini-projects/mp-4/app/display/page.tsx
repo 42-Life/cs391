@@ -1,12 +1,11 @@
-"use client"
 
 import BackButton from "@/components/back-button";
 import Artwork from "@/components/artwork";
-import {getKeyColor} from "@/getKeyColor";
-import Image from "next/image";
+// import {getKeyColor} from "@/lib/getKeyColor";
+// import Image from "next/image";
 
 export default function DisplayPage() {
-    const colorToUse = getKeyColor()
+    // const colorToUse = getKeyColor()
 
     // temporary
     const imageURL = `https://ids.lib.harvard.edu/ids/view/46473675`;
@@ -15,9 +14,10 @@ export default function DisplayPage() {
 
     return (
         <div className="flex flex-col align-items-center">
-            <Artwork color={colorToUse}/>
-            <Image
+            <Artwork/>
+            <img
                 src={imageURL} alt={altText}
+                // width={100} height={100}
                 className="w-md h-md border-2 m-3"
             />
             {/*<DisplayPage/>*/}
