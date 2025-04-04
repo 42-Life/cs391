@@ -20,9 +20,10 @@ export default function RootLayout(
     const KeyColor = getKeyColor();
 
     const bodyStyle = `
-        w-full items-center p-0 pb-5 flex flex-col bg-${KeyColor}-400
+        w-full items-center p-0 pb-5 flex flex-col 
+        bg-${KeyColor}-400
     `;
-
+    // bg-${KeyColor}-400
 
     return (
         <html lang="en" className={funnelFont.className}>

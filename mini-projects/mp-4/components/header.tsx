@@ -5,9 +5,6 @@
 
 export default function Header({color}:{color:string}) {
 
-    const keyColor = color;
-    const headerStyling = `text-4xl font-semibold p-4 text-white w-screen bg-blue-800 mb-5`;
-
     return (
       <header>
         <h2 className={`text-4xl font-semibold p-4 text-white w-screen bg-${color}-800 mb-5`}>

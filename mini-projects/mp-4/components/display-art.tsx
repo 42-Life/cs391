@@ -1,15 +1,15 @@
 "use client"
 
-const TestColor = ({color}:{color:string}) => {
-    return (
+import {DFProps} from "@/types";
+
+export default function DisplayArt({props}:{props: DFProps}) {
+    return(
         <div>
-            <p>Your colour is {color}</p>
+            <h2>{props.title}</h2>
+            <img
+                src={props.primaryimageurl}
+                alt={props.title + ": Harvard Art Gallery"}
+            />
         </div>
     );
 }
-
-TestColor.getInitialProps = async({ query } : {query:string}) => {
-    return {query}
-}
-
-export default TestColor;

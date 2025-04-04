@@ -1,7 +1,7 @@
 // client side component : user enters the colour they want from a finite list
 "use client"
 
-import {useState} from "react";
+import {useState, useEffect} from "react";
 import Link from "next/link";
 
 const color = "blue"
@@ -13,11 +13,11 @@ const colors: string[] = ["Red", "Blue", "Green", "Yellow", "Purple", "Orange"]
 
 export default function GetUserInfo() {
     const [color, setColor] = useState<string>("blue");
-    const ButtonStyling = `w-96 rounded-x1 p-4 m-5 border-2 border-black-200 bg-${color.toLowerCase()}-200 rounded-xl`;
+    const ButtonStyling = `w-96 rounded-x1 p-4 m-5 border-2 border-black-200 bg-blue-200 rounded-xl`;
 
     return(
         <div className={ButtonStyling}>
-            <h4 className={`text-lg underline underline-offset-3 m-2 text-${color.toLowerCase()}-800`}>What's your favourite colour?</h4>
+            <h4 className={`text-lg underline underline-offset-3 m-2 text-blue-800`}>What is your favourite colour?</h4>
             <form className="flex flex-col">
                 {colors.map(formColor => (
                     <div key={formColor}>
@@ -26,7 +26,9 @@ export default function GetUserInfo() {
                             name="color-select" className={inputStyle}
                             value={formColor}
                             onClick={() => console.log("last selection: "+formColor)}
-                            onChange={(e) => setColor(e.target.value)}
+                            onChange={(e) =>
+                                    setColor(e.target.value)
+                            }
                         />
                         <label htmlFor={formColor} className="text-md">{formColor}</label>
                     </div>
