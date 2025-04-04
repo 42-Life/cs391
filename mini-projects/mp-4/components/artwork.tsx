@@ -2,8 +2,8 @@
 
 import getArtWork from "@/lib/getArtWork";
 import {useEffect, useState} from "react";
-import useSWR from "swr";
 import {DFProps} from "@/types";
+// text-blue-500 text-red-500 text-green-500 text-purple-500 text-orange-500 text-yellow-500
 
 export default function Artwork() {
 
@@ -22,43 +22,11 @@ export default function Artwork() {
             .catch((e) => console.log("error during fetch" + e));
     }, []);
 
-    // const {data, error} = useSWR(`/api/getData`, (url) =>
-    //     fetch(url).then(res => res.json())
-    // );
-
-    // console.log("data: " + data);
-    // console.log("error: " + error);
-
-    // alt approach
-    // let getData = async () => {
-    //     const API_URL = 'harvard/';
-    //     const response = await fetch(API_URL);
-    //     const artwork = response.json();
-    //     console.log(artwork);
-    //
-    //     return artwork;
-    // }
-    //
-    // // async function getData():Promise<DFProps> {
-    // //     const API_URL = 'harvard/';
-    // //     const response = await fetch(API_URL);
-    // //     const artwork = response.json();
-    // //     console.log(artwork);
-    // //
-    // //     return artwork;
-    // // }
-
-    // const artwork = getData()
-    //     .then((data) => {console.log("data fetched:" + JSON.stringify(data))})
-    //     .catch((error) => {console.log(error)});
-
-    // if(error) return(<h3>Error</h3>)
-
     return (
         <div>
-            <h4>Behold, an artwork!</h4>
-            <p>Title: {artwork?.title}</p>
-            <img
+            <h4 className={`text-2xl font-bold underline mb-5 text-blue-50`}>
+                Behold, the artwork {artwork?.title}</h4>
+            <img className={`border-2 w-auto h-auto`}
                 src={artwork?.primaryimageurl}
                 alt={artwork?.title + " : Harvard Art Gallery"}
             />

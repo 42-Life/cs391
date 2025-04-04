@@ -11,5 +11,3 @@ export default function Header({color}:{color:string}) {
       </header>
     );
 }
-
-// text-${color.toLowerCase()}-800

@@ -4,7 +4,6 @@ import React from "react";
 import {Funnel_Display} from "next/font/google";
 import Header from "@/components/header";
 import "./globals.css";
-// import {getKeyColor} from "@/lib/getKeyColor";
 {/*  bg-red-400 bg-blue-400 bg-yellow-400 bg-green-400 bg-purple-400 bg-orange-400  */}
 
 const funnelFont = Funnel_Display({
@@ -22,7 +21,6 @@ export default function RootLayout(
         w-full items-center p-0 pb-5 flex flex-col 
         bg-${KeyColor}-400
     `;
-    // bg-${KeyColor}-400
 
     return (
         <html lang="en" className={funnelFont.className}>
