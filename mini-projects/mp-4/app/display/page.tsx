@@ -3,6 +3,7 @@
 import BackButton from "@/components/back-button";
 import Artwork from "@/components/artwork";
 import {getKeyColor} from "@/getKeyColor";
+import Image from "next/image";
 
 export default function DisplayPage() {
     const colorToUse = getKeyColor()
@@ -15,7 +16,7 @@ export default function DisplayPage() {
     return (
         <div className="flex flex-col align-items-center">
             <Artwork color={colorToUse}/>
-            <img
+            <Image
                 src={imageURL} alt={altText}
                 className="w-md h-md border-2 m-3"
             />

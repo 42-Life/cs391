@@ -1,7 +1,7 @@
 // client side component : user enters the colour they want from a finite list
 "use client"
 
-import {useState, useEffect} from "react";
+import {useState} from "react";
 import Link from "next/link";
 
 const color = "blue"
