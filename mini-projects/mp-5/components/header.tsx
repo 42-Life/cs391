@@ -1,4 +1,5 @@
 import {darkBG} from "@/lib/text-styles";
+{/* bg-slate-700 */}
 
 export default function Header() {
     return(

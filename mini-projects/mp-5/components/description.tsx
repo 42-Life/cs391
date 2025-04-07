@@ -1,4 +1,5 @@
 import {darkText, medDarkText} from "@/lib/text-styles";
+{/* text-slate-700 text-slate-500 */}
 
 export default function Description(){
     return(

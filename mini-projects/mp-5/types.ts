@@ -5,3 +5,8 @@ export type actionTypes = {
     colorStyling: string
     addtl?:string;
 }
+
+export type inputGroup = {
+    id: string,
+    label: string,
+}
