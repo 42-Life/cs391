@@ -2,15 +2,33 @@
 
 import ActionBox from "@/components/action-box";
 import {errorBG, goodBG} from "@/lib/text-styles";
-import {condDisplayTypes, outputURL} from "@/types";
+import {condDisplayTypes, outputURL, urlInfo} from "@/types";
 import Link from "next/link";
-import {usePathname} from "next/navigation";
+import getLastData from "@/lib/get-last-data";
+import {useEffect, useState} from "react";
+// import {validateAlias, validateURL} from "@/lib/validation";
 
 const subtitleStyle = `font-semibold underline underline-offset-3 mb-2`;
 
 export default function CondDisplay({props}:{props:condDisplayTypes}){
 
-    const path = outputURL.toString() + usePathname() + "alias-here"
+    const [url, setUrl] = useState("");
+    const [alias, setAlias] = useState("");
+
+    function setBoth(response:urlInfo) {
+        setUrl(response.url);
+        setAlias(response.alias);
+        console.log("url: " + url);
+        console.log("alias: " + alias);
+    }
+
+    useEffect(()=>{
+        getLastData()
+            .then(response => setBoth(response))
+
+    })
+
+    const path = outputURL.toString() + "/" + alias
 
     const badMessage =
         <div className={`text-center`}>
@@ -22,8 +40,9 @@ export default function CondDisplay({props}:{props:condDisplayTypes}){
     const goodMessage =
         <div className={`text-center`}>
             <p className={subtitleStyle}>Here is your compact URL!</p>
-            <Link href={"https://google.com"} className={`hover:underline hover:opacity-70 hover:text-green-300`}> {path} </Link>
-            {/*  LINK IS A PLACEHOLDER FOR OUTPUT URL  */}
+            <Link href={url} className={`hover:underline hover:opacity-70 hover:text-green-300`}> {path} </Link>
+            {/*<p>{url!=undefined ? url : "bad out"}</p>*/}
+            {/*  NEED TO BIND PATH TO INPUT URL NOW. FIX URL UNDEFINED  */}
         </div>
 
     return(

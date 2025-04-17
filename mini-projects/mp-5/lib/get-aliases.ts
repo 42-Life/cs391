@@ -7,7 +7,7 @@ export default async function getAliases() : Promise<urlInfo[]> {
 
     const urlRecords : urlInfo[] = data.map((p) => ({
         alias : p.alias.toHexString(),
-        givenURL : p.givenURL.toHexString(),
+        url : p.givenURL.toHexString(),
     }));
 
     return urlRecords.reverse();

@@ -19,7 +19,7 @@ export type inputGroup = {
 export type urlInfo = {
     id?: string;
     alias : string,
-    givenURL : string,
+    url : string,
     redirectURL? : string,
     aliasExists? : boolean,
 }
