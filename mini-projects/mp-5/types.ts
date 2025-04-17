@@ -9,15 +9,19 @@ export type actionTypes = {
 export type inputGroup = {
     id: string,
     label: string,
-    boxLength: number,
+    boxLength?: number,
     textAlign: string,
+    inputChild?: React.ReactNode,
+    isAlias?: boolean,
+    type: string,
 }
 
 export type urlInfo = {
-    alias : string|null,
-    redirectURL : string,
-    contentURL : string,
-    aliasExists : boolean,
+    id?: string;
+    alias : string,
+    givenURL : string,
+    redirectURL? : string,
+    aliasExists? : boolean,
 }
 
 export type condDisplayTypes = {

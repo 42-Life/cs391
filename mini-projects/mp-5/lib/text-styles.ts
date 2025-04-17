@@ -13,5 +13,3 @@ export const boxStyleOut = `
     text-white rounded-xl
     mx-7 border-1 border-gray-400
 `;
-
-// export const subTitleStyle;
