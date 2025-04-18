@@ -3,8 +3,9 @@ import getCollection, {URL_COLLECTION} from "@/db";
 import {urlInfo} from "@/types";
 import {ObjectId} from "mongodb";
 
-let alias = "placeholder-alias";
+let alias = "";
 let url = "placeholder-url";
+let id = "placeholder-id"
 
 async function pullData(lastId: string): Promise<urlInfo|null> {
     const urlID = ObjectId.createFromHexString(lastId);
@@ -24,26 +25,40 @@ async function pullData(lastId: string): Promise<urlInfo|null> {
     };
 }
 
-async function retrieveLastData() {
+// async function retrieveLastData() {
+//     try {
+//         const response = await pullData("6800ab25e2b6075d6900a39d");
+//         console.log(response);
+//         if (!(response === null)) {
+//             console.log(response);
+//             return response;
+//         }
+//         return null
+//
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+export default async function getLastData(lastId: string):Promise<urlInfo> {
+    let response2 = null;
     try {
-        const response = await pullData("6800ab25e2b6075d6900a39d");
+        const response = await pullData(lastId);
         console.log(response);
         if (!(response === null)) {
             console.log(response);
-            return response;
+            response2 = response;
         }
-        return null
 
     } catch (error) {
         console.log(error);
     }
-}
 
-export default async function getLastData():Promise<urlInfo> {
-    const response = await retrieveLastData();
-    if (response !== null && response !== undefined) {
-        url = response.url;
-        alias = response.alias;
+    // const response = await retrieveLastData();
+    if (response2 !== null && response2 !== undefined) {
+        url = response2.url;
+        alias = response2.alias;
+        id = response2.id as string;
     }
-    return ({alias: alias, url: url});
+    return ({alias: alias, url: url, id: id});
 }

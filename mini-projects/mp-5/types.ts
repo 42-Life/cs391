@@ -27,6 +27,7 @@ export type urlInfo = {
 export type condDisplayTypes = {
     hide : boolean,
     good : boolean,
+    targetID : string,
     // message : React.ReactElement,
 }
 

@@ -23,7 +23,9 @@ const propertiesAlias : inputGroup = {
 export default function EnterInfo() {
 
     return (
-        <form action={addData} className={`flex flex-col mb-4`}>
+        <form action={(formData) => addData(formData)
+            .then((res) => console.log("ID OUT: " + res.id + " and " + res.alias + " also " + res.url))
+        } className={`flex flex-col mb-4`}>
             <InfoDiv props={propertiesURL} />
             <InfoDiv props={propertiesAlias} />
             <ActionBox colorStyling={medDarkBG} addtl={`my-5 w-lg`}>
