@@ -11,27 +11,25 @@ const subtitleStyle = `font-semibold underline underline-offset-3 mb-2`;
 
 export default function CondDisplay({props}:{props:condDisplayTypes}){
 
-    const [url, setUrl] = useState("");
+    let path = "";
     const [alias, setAlias] = useState("");
 
     function setBoth(response:urlInfo) {
-        setUrl(response.url);
         setAlias(response.alias);
-
     // DISPLAY
-        console.log("most recent url: " + url);
-        // console.log("alias: " + alias);
-        // console.log("id:" + response.id);
+    //     console.log("alias: " + alias);
+    //     console.log("id:" + response.id);
     }
 
     // need to param getLastData with the ID of the most recently entered value
     useEffect(()=> {
         getLastData(props.targetID)
             .then(response => setBoth(response));
-            // ADD HANDLING IN CASE RESPONSE IS NULL
     })
 
-    const path = outputURL.toString() + "/" + alias
+    if (alias) {
+        path = outputURL.toString() + "/" + alias
+    }
 
     const badMessage =
         <div className={`text-center`}>

@@ -1,23 +1,34 @@
 "use server";
 import getCollection, {URL_COLLECTION} from "@/db";
 import {urlInfo} from "@/types";
+import validation from "@/lib/validation";
 
-export default async function addData(formData: FormData) {
+export default async function addData(formData: FormData) : Promise<urlInfo|null> {
     const url = formData.get('url') as string;
     const alias = formData.get('alias') as string;
-    // const id = "";
+
+    // props needed for validation
+    const urlProps : urlInfo = {
+        url : url,
+        alias: alias,
+    }
+
+    const areInputsValid = await validation(urlProps);
 
     const collection = await getCollection(URL_COLLECTION);
     console.log('got collection: ', collection);
-    return await collection.insertOne({ url, alias })
-        .then((result):urlInfo => {
-            return {
-                id: result.insertedId.toHexString(),
-                alias: alias,
-                url: url};
-        })
-        // .catch((err) => {console.log(err)});
 
-    // return [url, alias];
+    if (areInputsValid) {
+        return await collection.insertOne({ url, alias })
+            .then((result):urlInfo => {
+                return {
+                    id: result.insertedId.toHexString(),
+                    alias: alias,
+                    url: url};
+            })
+    }
+
+    return null;
+
 }
 
