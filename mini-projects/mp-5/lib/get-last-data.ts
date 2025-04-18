@@ -3,9 +3,7 @@ import getCollection, {URL_COLLECTION} from "@/db";
 import {urlInfo} from "@/types";
 import {ObjectId} from "mongodb";
 
-let alias = "";
-let url = "placeholder-url";
-let id = "placeholder-id"
+// CREATE MUTUALLY EXCLUSIVE TYPE SO YOU DON'T HAVE TO DECLARE EMPTY VARIABLES. CAN RETURN ERROR INSTEAD
 
 async function pullData(lastId: string): Promise<urlInfo|null> {
     const urlID = ObjectId.createFromHexString(lastId);
@@ -25,21 +23,6 @@ async function pullData(lastId: string): Promise<urlInfo|null> {
     };
 }
 
-// async function retrieveLastData() {
-//     try {
-//         const response = await pullData("6800ab25e2b6075d6900a39d");
-//         console.log(response);
-//         if (!(response === null)) {
-//             console.log(response);
-//             return response;
-//         }
-//         return null
-//
-//     } catch (error) {
-//         console.log(error);
-//     }
-// }
-
 export default async function getLastData(lastId: string):Promise<urlInfo> {
     let response2 = null;
     try {
@@ -56,9 +39,16 @@ export default async function getLastData(lastId: string):Promise<urlInfo> {
 
     // const response = await retrieveLastData();
     if (response2 !== null && response2 !== undefined) {
-        url = response2.url;
-        alias = response2.alias;
-        id = response2.id as string;
+        return ({alias: response2.alias, url : response2.url, id: response2.id as string});
+
+        // url = response2.url;
+        // alias = response2.alias;
+        // id = response2.id as string;
     }
+    const alias = "";
+    const url = "";
+    const id = ""
+
     return ({alias: alias, url: url, id: id});
+    // return null;
 }

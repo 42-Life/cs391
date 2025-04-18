@@ -17,15 +17,18 @@ export default function CondDisplay({props}:{props:condDisplayTypes}){
     function setBoth(response:urlInfo) {
         setUrl(response.url);
         setAlias(response.alias);
-        console.log("url: " + url);
-        console.log("alias: " + alias);
-        console.log("id:" + response.id);
+
+    // DISPLAY
+        console.log("most recent url: " + url);
+        // console.log("alias: " + alias);
+        // console.log("id:" + response.id);
     }
 
     // need to param getLastData with the ID of the most recently entered value
     useEffect(()=> {
         getLastData(props.targetID)
-            .then(response => setBoth(response))
+            .then(response => setBoth(response));
+            // ADD HANDLING IN CASE RESPONSE IS NULL
     })
 
     const path = outputURL.toString() + "/" + alias

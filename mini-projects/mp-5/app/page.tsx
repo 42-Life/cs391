@@ -3,39 +3,29 @@
 import Description from "@/components/description";
 import ActionBox from "@/components/action-box";
 import {darkBG, medDarkBG} from "@/lib/text-styles";
-// import EnterInfo from "@/components/enter-info";
 import CondDisplay from "@/components/cond-display";
 import {condDisplayTypes, inputGroup, urlInfo} from "@/types";
 import {useState} from "react";
 import addData from "@/lib/add-data";
 import InfoDiv from "@/components/info-div";
 import validation from "@/lib/validation";
-// import {useState} from "react";
-// import validation from "@/lib/validation";
 {/* bg-slate-700 bg-slate-500 */}
 
 export default function Home() {
-
-    // const [formDone, setFormDone] = useState<boolean>(false);
-    // const [id, setID] = useState<string>("");
-
-
     const [url, setUrl] = useState("");
     const [alias, setAlias] = useState("");
     const [targetID, setTargetID] = useState("");
+    const [formState, setFormState] = useState(false);
+    // true if form has been submitted
 
     const urlProps : urlInfo = {
         url : url,
         alias: alias,
     }
 
-    // function validate() : boolean {
-    //     const isGood = validation(urlProps).then((res) => res)
-    //     // return
-    // }
-
+    // hide if nothing has been entered so far
     const userMessage: condDisplayTypes = {
-        hide : !validation(urlProps),
+        hide : !formState,
         good : validation(urlProps),
         targetID : targetID,
     }
@@ -66,9 +56,10 @@ export default function Home() {
       <div>
           <Description/>
           <ActionBox colorStyling={darkBG}>
-              {/*<EnterInfo/>*/}
               <form action={(formData) => addData(formData)
                   .then((res) => setAll(res))
+                  .then(() => setFormState(!userMessage.good))
+
               } className={`flex flex-col mb-4`}>
                   <InfoDiv props={propertiesURL} />
                   <InfoDiv props={propertiesAlias} />

@@ -7,18 +7,21 @@
 
 import {urlInfo} from "@/types";
 
-export function validateAlias (alias: string|null) {
-    return (
-        (alias != null) && (alias != "") &&
-        !(alias.includes("?")) && !(alias.includes("&"))
-        && !(alias.includes("=")) && !(alias.includes("/"))
-    );
+function validateAlias (alias: string|null) {
+    return !(alias === null || alias === undefined || alias.length === 0 || alias.includes(" ") ||
+        alias.includes("?") || alias.includes("&") || alias.includes("=") || alias.includes("/"));
+
+    // also check if alias is already in database
 }
 
-export function validateURL (url: string|null) {
-    return (url != null) && (url != "");
+function validateURL (url: string|null) {
+    const regex = /^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/;
+    return ((url == null) || regex.test(url));
 }
 
 export default function validation(props:urlInfo) {
+    // console.log("URL was well-formed?", validateURL(props.url));
+    // console.log("Alias was well-formed?", validateAlias(props.alias));
+    // console.log("Validation returns:", validateAlias(props.alias) && validateURL(props.url));
     return (validateAlias(props.alias) && validateURL(props.url));
 }
