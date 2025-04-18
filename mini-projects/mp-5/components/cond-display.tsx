@@ -2,7 +2,7 @@
 
 import ActionBox from "@/components/action-box";
 import {errorBG, goodBG} from "@/lib/text-styles";
-import {condDisplayTypes, outputURL, urlInfo} from "@/types";
+import {condDisplayTypes, outputURL} from "@/types";
 import Link from "next/link";
 import {useEffect, useState} from "react";
 import getLastData from "@/lib/get-last-data";
@@ -14,17 +14,9 @@ export default function CondDisplay({props}:{props:condDisplayTypes}){
     let path = "";
     const [alias, setAlias] = useState("");
 
-    function setBoth(response:urlInfo) {
-        setAlias(response.alias);
-    // DISPLAY
-    //     console.log("alias: " + alias);
-    //     console.log("id:" + response.id);
-    }
-
-    // need to param getLastData with the ID of the most recently entered value
     useEffect(()=> {
         getLastData(props.targetID)
-            .then(response => setBoth(response));
+            .then(response => setAlias(response.alias));
     })
 
     if (alias) {

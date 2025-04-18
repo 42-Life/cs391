@@ -11,34 +11,11 @@ import InfoDiv from "@/components/info-div";
 {/* bg-slate-700 bg-slate-500 */}
 
 export default function Home() {
-    // const [url, setUrl] = useState("");
-    // const [alias, setAlias] = useState("");
     const [targetID, setTargetID] = useState("");
     const [formState, setFormState] = useState(false);
     // true if form has been submitted
     const [isDataValid, setIsDataValid] = useState(true);
     // true if data has been validated
-
-    // const urlProps : urlInfo = {
-    //     url : url,
-    //     alias: alias,
-    // }
-
-    // Second validation is redundant, but useful for updating useState, which affects error message
-    // function getValidation() {
-    //     useEffect(() => {
-    //         validation(urlProps)
-    //             .then((res) => setIsDataValid(res))
-    //             .then(() => console.log("validation result:",isDataValid))
-    //             .then(() => (console.log("valid data?", isDataValid, ". urlProps:", urlProps.url, urlProps.alias)))
-    //             .catch((err) => {console.log(err)});
-    //     })
-    // }
-
-    // once form has been submitted, validate data -> this determines which message is displayed
-    // if (formState) {
-    //     getValidation();
-    // }
 
     // hide if nothing has been entered so far
     const userMessage: condDisplayTypes = {
@@ -64,9 +41,11 @@ export default function Home() {
     }
 
     function setAll(res:urlInfo) {
-        // try { setAlias(res.alias) } catch(err) { console.log("alias error", err) }
-        // try { setUrl(res.url) } catch(err) { console.log("url error", err) }
-        try { setTargetID((!res.id) ? "" : res.id) } catch(err) { console.log("id error", err) }
+        try {
+            setTargetID((!res.id) ? "" : res.id) }
+        catch(err) {
+            console.log("id error", err)
+        }
     }
 
     return (
@@ -79,16 +58,13 @@ export default function Home() {
                       {
                           if (res === null) {
                               setAll({url: "", alias: ""});
-                              console.log("no data");
                               setIsDataValid(false);
                           } else {
                               setAll(res);
-                              console.log("got data!");
                               setIsDataValid(true);
                           }
                       })
                           .catch((err) => console.log("error in submission:", err))
-                      // .then(() => getValidation())
                       .then(() => setFormState(true))
 
               } className={`flex flex-col mb-4`}>

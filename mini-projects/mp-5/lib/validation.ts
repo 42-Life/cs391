@@ -1,9 +1,7 @@
 "use server"
 
-// REMEMBER:
 // For links, allow HTTPS & HTTP, and allow links with subdomains
-// Allow links with subdomains
-// For [alias], don't allow "?", "&", "=", "/"
+// For alias, don't allow "?", "&", "=", "/"
 
 import {urlInfo} from "@/types";
 import getCollection, {URL_COLLECTION} from "@/db";
