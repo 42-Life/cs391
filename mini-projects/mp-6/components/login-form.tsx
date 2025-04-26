@@ -6,13 +6,12 @@ import {signInButtonStyle} from "@/lib/text-styles";
 export default function LoginForm() {
 
     return(
-        <form onSubmit={login}>
-            <button
-                className={signInButtonStyle}
-                type="submit"
-            >
-                Please sign in to continue
-            </button>
-        </form>
+        <button
+            className={signInButtonStyle}
+            onClick={login}
+            type="submit"
+        >
+            Please sign in to continue
+        </button>
     );
 }
