@@ -1,5 +1,5 @@
-import SignInButton from "@/components/sign-in-button";
 import {titleStyle} from "@/lib/text-styles";
+import LoginForm from "@/components/login-form";
 
 export default function Home() {
   return(
@@ -7,7 +7,7 @@ export default function Home() {
           <h1 className={titleStyle}>
               Google Authorisation
           </h1>
-          <SignInButton/>
+          <LoginForm />
       </>
   );
 }
