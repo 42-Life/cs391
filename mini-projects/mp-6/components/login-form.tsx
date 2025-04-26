@@ -11,7 +11,7 @@ export default function LoginForm() {
             onClick={login}
             type="submit"
         >
-            Please sign in to continue
+            Sign in with your GitHub account to continue
         </button>
     );
 }
